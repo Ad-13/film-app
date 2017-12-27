@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
+import { TestAngComponent } from './test-ang/test-ang.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    TestAngComponent
   ],
   imports: [
     BrowserModule,
