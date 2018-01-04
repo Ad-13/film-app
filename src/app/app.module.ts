@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
 import { TestAngComponent } from './test-ang/test-ang.component';
+import { FilmCardService } from './film-card/film-card.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { TestAngComponent } from './test-ang/test-ang.component';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [FilmCardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

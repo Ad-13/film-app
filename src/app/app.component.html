@@ -1,30 +1,58 @@
-<div>
-  <mat-toolbar color="primary">
-    <span>
-      <mat-icon>mood</mat-icon>
-    </span>
+<mat-toolbar color="primary" class="page-header" role="header">
+  <nav class="page-header-nav">
+    <a href="" class="page-header-nav__link" mat-button>
+      <span class="txt">Link-1</span>
+    </a>
+    <a href="" class="page-header-nav__link" mat-button>
+      <span class="txt">Link-2</span>
+    </a>
+    <a href="" class="page-header-nav__link" mat-button>
+      <span class="txt">Link-3</span>
+    </a>
+    <a href="" class="page-header-nav__link" mat-button>
+      <span class="txt">Link-4</span>
+    </a>
+    <a href="" class="page-header-nav__link" mat-button>
+      <span class="txt">Link-5</span>
+    </a>
+  </nav>
+</mat-toolbar>
 
-    <span>Yay, Material in Angular 2!</span>
-
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-  </mat-toolbar>
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
-  </mat-menu>
-
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-  </mat-card>
-
-  <span class="done">
-    <button mat-fab>
-      <mat-icon>check circle</mat-icon>
-    </button>
-  </span>
-</div>
+<mat-sidenav-container class="page-content">
+  <mat-sidenav-content>
+    <div class="film-list">
+      <mat-card class="film-item">
+        <p class="film-item__img"></p>
+        <div class="film-item__descr">
+          <a href="" class="film-item__title">item__title</a>
+          <p class="film-item__txt1">item__descr1 item__descr1</p>
+          <p class="film-item__txt2">item__descr2 item__descr2item__descr2 item__descr2item__descr2</p>
+        </div>
+      </mat-card>
+      <mat-card class="film-item">
+        <p class="film-item__img"></p>
+        <div class="film-item__descr">
+          <a href="" class="film-item__title">item__title</a>
+          <p class="film-item__txt1">item__descr1 item__descr1</p>
+          <p class="film-item__txt2">item__descr2 item__descr2item__descr2 item__descr2item__descr2</p>
+        </div>
+      </mat-card>
+      <mat-card class="film-item">
+        <p class="film-item__img"></p>
+        <div class="film-item__descr">
+          <a href="" class="film-item__title">item__title</a>
+          <p class="film-item__txt1">item__descr1 item__descr1</p>
+          <p class="film-item__txt2">item__descr2 item__descr2item__descr2 item__descr2item__descr2</p>
+        </div>
+      </mat-card>
+      <mat-card class="film-item">
+        <p class="film-item__img"></p>
+        <div class="film-item__descr">
+          <a href="" class="film-item__title">item__title</a>
+          <p class="film-item__txt1">item__descr1 item__descr1</p>
+          <p class="film-item__txt2">item__descr2 item__descr2item__descr2 item__descr2item__descr2</p>
+        </div>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
