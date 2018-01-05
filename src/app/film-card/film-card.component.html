@@ -1,3 +1,27 @@
-<p>
-  film-card works!
-</p>
+<form class="film-search">
+  <mat-form-field class="film-search-inputs">
+    <input  matInput 
+            placeholder="Search film" 
+            value="" 
+            class="input" 
+            name="filmName" 
+            [(ngModel)]="filmName"
+            (input)="getFilms()">
+  </mat-form-field>
+</form>
+
+<div class="film-list">
+  <mat-card class="film-item" *ngFor="let film of filmList">
+    <a href="" class="film-item__img">
+      <img src="{{film.Poster}}" alt="film poster" class="img">
+    </a>
+    <div class="film-item__descr">
+      <a href="" class="film-item__title"><span class="txt">{{film.Title}}</span></a>
+      <p class="film-item__txt2">{{film.Type}}</p>
+      <p class="film-item__txt1">{{film.Year}}</p>
+    </div>
+    <div class="film-item__actions">
+      <button class="btn" mat-button>More...</button>
+    </div>
+  </mat-card>
+</div>

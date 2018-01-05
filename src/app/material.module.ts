@@ -8,8 +8,11 @@ import {
     MatTooltipModule,
     MatSidenavModule,
     MatGridListModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatCardModule
 } from '@angular/material';
+
 
 @NgModule({
     imports: [
@@ -20,6 +23,8 @@ import {
         MatTooltipModule,
         MatSidenavModule,
         MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
         MatCardModule
     ],
     exports: [
@@ -30,6 +35,8 @@ import {
         MatTooltipModule,
         MatSidenavModule,
         MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
         MatCardModule
     ]
 })
