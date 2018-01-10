@@ -9,15 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
-import { TestAngComponent } from './test-ang/test-ang.component';
 import { FilmCardService } from './film-card/film-card.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmCardComponent,
-    TestAngComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
