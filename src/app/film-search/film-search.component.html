@@ -1,0 +1,11 @@
+<form class="film-search">
+  <mat-form-field class="film-search-inputs">
+    <input matInput 
+           placeholder="Search film"
+           value=""
+           class="input"
+           name="filmName"
+           [(ngModel)]="filmName"
+           (input)="getFilms()">
+  </mat-form-field>
+</form>

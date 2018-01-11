@@ -1,19 +1,12 @@
-.film-list {
-    display: flex;
-    padding: 30px 15px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-}
-
-.film-item {
+:host {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+                0 2px 2px 0 rgba(0,0,0,.14),
+                0 1px 5px 0 rgba(0,0,0,.12);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
     padding: 0;
-    width: 32%;
     &:hover {
         box-shadow: 0 3px 7px -2px rgba(0,0,0,.2), 0 2px 9px 0 rgba(0,0,0,.14), 0 1px 12px 0 rgba(0,0,0,.12);
     }

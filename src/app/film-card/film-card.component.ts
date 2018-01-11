@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input
+} from '@angular/core';
+
 import { FilmCardService } from './film-card.service';
 
 
@@ -9,24 +14,12 @@ import { FilmCardService } from './film-card.service';
 })
 export class FilmCardComponent implements OnInit {
 
-  filmList: Object[] = [];
-  filmName: string;
+  @Input()
+  film: object;
 
   constructor(private filmCardService: FilmCardService) { }
 
   ngOnInit() {
-    this.filmName = 'Star Wars';
-    this.getFilms();
-  }
-
-  private getFilms() {
-    if (!this.filmName) {
-      return;
-    }
-    this.filmCardService.getFilms(this.filmName).subscribe(data => {
-      this.filmList = data;
-      console.log(data);
-    });
   }
 
 }

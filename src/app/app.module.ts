@@ -11,13 +11,17 @@ import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
 import { FilmCardService } from './film-card/film-card.service';
 import { HeaderComponent } from './header/header.component';
+import { FilmListComponent } from './film-list/film-list.component';
+import { FilmSearchComponent } from './film-search/film-search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmCardComponent,
-    HeaderComponent
+    HeaderComponent,
+    FilmListComponent,
+    FilmSearchComponent
   ],
   imports: [
     BrowserModule,

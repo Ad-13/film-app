@@ -1,0 +1,13 @@
+.film-list {
+    display: flex;
+    padding: 30px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+
+    .film-item {
+        margin-bottom: 20px;
+        width: 32%;
+    }
+}
