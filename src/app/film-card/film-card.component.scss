@@ -12,6 +12,17 @@
     }
 }
 
+:host-context(.film-list.list) {
+    .film-item__img {
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .film-item__descr {
+        margin-top: 0;
+    }
+}
+
 .film-item__img {
     background: #eee;
     display: flex;

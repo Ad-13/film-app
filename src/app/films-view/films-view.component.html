@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-select class="type-list" 
+              (change)="setListView($event)"
+              [(ngModel)]="typeValue"
+              placeholder="list view">
+    <mat-option class="type-list-item" *ngFor="let type of typeList" [value]="type.value">
+      {{ type.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

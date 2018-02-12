@@ -13,6 +13,7 @@ import { FilmCardService } from './film-card/film-card.service';
 import { HeaderComponent } from './header/header.component';
 import { FilmListComponent } from './film-list/film-list.component';
 import { FilmSearchComponent } from './film-search/film-search.component';
+import { FilmsViewComponent } from './films-view/films-view.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FilmSearchComponent } from './film-search/film-search.component';
     FilmCardComponent,
     HeaderComponent,
     FilmListComponent,
-    FilmSearchComponent
+    FilmSearchComponent,
+    FilmsViewComponent
   ],
   imports: [
     BrowserModule,

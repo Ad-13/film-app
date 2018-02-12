@@ -1,7 +1,6 @@
 import {
   Component,
-  OnInit,
-  Output
+  OnInit
  } from '@angular/core';
 
 @Component({
@@ -9,9 +8,12 @@ import {
   templateUrl: './film-list.component.html',
   styleUrls: ['./film-list.component.scss']
 })
+
 export class FilmListComponent implements OnInit {
 
   filmList: Object[] = [];
+
+  viewType: string;
 
   constructor() { }
 
@@ -20,6 +22,10 @@ export class FilmListComponent implements OnInit {
 
   buildList(data) {
     this.filmList = data;
+  }
+
+  setListView(viewType) {
+    this.viewType = viewType;
   }
 
 }
