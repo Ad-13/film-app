@@ -1,8 +1,6 @@
 import {
   Component,
-  OnInit,
-  Output,
-  EventEmitter
+  OnInit
 } from '@angular/core';
 
 import { FilmCardService } from '../film-card/film-card.service';
@@ -14,11 +12,7 @@ import { FilmCardService } from '../film-card/film-card.service';
 })
 export class FilmSearchComponent implements OnInit {
 
-  filmList: Object[] = [];
   filmName: string = 'Star Wars';
-
-  @Output()
-  getFilmsEvent: EventEmitter<Object[]> = new EventEmitter();
 
   constructor(private filmCardService: FilmCardService) { }
 
@@ -30,11 +24,7 @@ export class FilmSearchComponent implements OnInit {
     if (!this.filmName) {
       return;
     }
-    this.filmCardService.getFilms(this.filmName).subscribe(data => {
-      this.filmList = data;
-      this.getFilmsEvent.emit(this.filmList);
-      console.log(data);
-    });
+    this.filmCardService.sendSearchText(this.filmName);
   }
 
 }
