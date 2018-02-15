@@ -29,4 +29,8 @@ export class FilmCardService {
     return this.http.get(this.url + filmName).map(this.extractData);
   }
 
+  loadMore() {
+    console.log(1213);
+  }
+
 }
