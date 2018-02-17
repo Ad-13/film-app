@@ -1,6 +1,7 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  Input
 } from '@angular/core';
 
 import { FilmCardService } from '../film-card/film-card.service';
@@ -12,19 +13,17 @@ import { FilmCardService } from '../film-card/film-card.service';
 })
 export class FilmSearchComponent implements OnInit {
 
-  filmName: string = 'Star Wars';
+  @Input()
+  filmName: string;
 
   constructor(private filmCardService: FilmCardService) { }
 
   ngOnInit() {
-    this.getFilms();
   }
 
   private getFilms() {
-    if (!this.filmName) {
-      return;
-    }
-    this.filmCardService.sendSearchText(this.filmName);
+    if (!this.filmName) { return; }
+    this.filmCardService.emitNewFilmObserver(this.filmName);
   }
 
 }

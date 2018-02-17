@@ -20,7 +20,7 @@ export class LoadMoreComponent implements OnInit {
 
   @HostListener('click')
   click() {
-    this.filmCardService.loadMore();
+    this.filmCardService.onLoadMore();
   }
 
 }
