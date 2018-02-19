@@ -20,7 +20,21 @@ export class MoveTopComponent implements OnInit {
 
   @HostListener('click')
   click() {
-    document.querySelector('.sidenav-content').scrollTop = 0;
+    let elem = document.querySelector('.sidenav-content');
+
+    function tick() {
+      if (elem.scrollTop === 0) {
+        return;
+      }
+      elem.scrollTop = elem.scrollTop - 50;
+      if (elem.scrollTop <= 0) {
+        elem.scrollTop = 0;
+      }
+      setTimeout(() => {
+        tick();
+      }, 0);
+    }
+    tick();
   }
 
 }
