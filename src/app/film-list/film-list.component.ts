@@ -18,6 +18,7 @@ export class FilmListComponent implements OnInit {
   private subscription: Subscription;
   public filmList: Object[] = [];
   public viewType: string;
+  public isDataLoaded: boolean = false;
   @Output() public filmName: string = 'Star Wars';
 
   constructor(private filmCardService: FilmCardService) { }
@@ -38,6 +39,10 @@ export class FilmListComponent implements OnInit {
     this.filmList = data;
   }
 
+  private clearList(): void {
+    this.filmList = [];
+  }
+
   private extendList(data): void {
     this.filmList = this.filmList.concat(data);
   }
@@ -48,15 +53,34 @@ export class FilmListComponent implements OnInit {
 
   private getFilms(filmName): void {
     if (!filmName) { return; }
-    this.filmCardService.loadFilms(filmName).subscribe(data => {
-      this.buildList(data);
-    });
+    this.clearList();
+    this.isDataLoaded = false;
+    this.filmCardService.loadFilms(filmName).subscribe(
+      data => {
+        this.buildList(data);
+      },
+      error => {
+        console.log(error);
+      },
+      () => {
+        this.isDataLoaded = true;
+      }
+    );
   }
 
   private addFilms(): void {
-    this.filmCardService.loadMore().subscribe(data => {
-      this.extendList(data);
-    });
+    this.isDataLoaded = false;
+    this.filmCardService.loadMore().subscribe(
+      data => {
+        this.extendList(data);
+      },
+      error => {
+        console.log(error);
+      },
+      () => {
+        this.isDataLoaded = true;
+      }
+    );
   }
 
 }

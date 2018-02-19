@@ -20,7 +20,7 @@ export class MoveTopComponent implements OnInit {
 
   @HostListener('click')
   click() {
-    this.filmCardService.loadMore();
+    document.querySelector('.sidenav-content').scrollTop = 0;
   }
 
 }

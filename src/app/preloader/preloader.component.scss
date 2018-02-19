@@ -1,0 +1,25 @@
+:host(.inactive) {
+    display: none;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin .7s ease-in-out infinite;
+}
+
+@keyframes scaleDown {
+    0% { transform: scale(1); }
+    100% {
+        transform: scale(0);
+        display: none;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

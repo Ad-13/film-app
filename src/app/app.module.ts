@@ -16,6 +16,7 @@ import { FilmSearchComponent } from './film-search/film-search.component';
 import { FilmsViewComponent } from './films-view/films-view.component';
 import { LoadMoreComponent } from './load-more/load-more.component';
 import { MoveTopComponent } from './move-top/move-top.component';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MoveTopComponent } from './move-top/move-top.component';
     FilmSearchComponent,
     FilmsViewComponent,
     LoadMoreComponent,
-    MoveTopComponent
+    MoveTopComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,

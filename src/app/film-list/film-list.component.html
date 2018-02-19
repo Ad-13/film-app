@@ -2,10 +2,10 @@
 
 <app-films-view (setListViewEvent)="setListView($event)"></app-films-view>
 
-<app-move-top></app-move-top>
 
 <div class="film-list" [ngClass]="viewType">
   <app-film-card [film]="film" *ngFor="let film of filmList" class="film-item"></app-film-card>
 </div>
 
+<app-preloader [class.inactive]="isDataLoaded"></app-preloader>
 <app-load-more>Load-more</app-load-more>
